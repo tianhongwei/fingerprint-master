@@ -109,7 +109,7 @@ public class FingureAriseActivity extends Activity {
     private void setFingurePws() {
         // TODO Auto-generated method stub
         try {
-            mKeyStore = KeyStore.getInstance("AndroidKeyStroe");
+            mKeyStore = KeyStore.getInstance("AndroidKeyStorethw");
         } catch (KeyStoreException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -117,7 +117,7 @@ public class FingureAriseActivity extends Activity {
 
         try {
 
-            mKeyGenerator = KeyGenerator.getInstance(KeyProperties.KEY_ALGORITHM_AES, "AndroidKeyStroe");
+            mKeyGenerator = KeyGenerator.getInstance(KeyProperties.KEY_ALGORITHM_AES, "AndroidKeyStorethw");
 
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
@@ -210,7 +210,7 @@ public class FingureAriseActivity extends Activity {
             dialog.dismiss();
 
         } else {
-            Toast.makeText(FingureAriseActivity.this, stringId, 0).show();
+            Toast.makeText(FingureAriseActivity.this, stringId, Toast.LENGTH_SHORT).show();
 //        	ShowToast.showToast(FingureAriseActivity.this, stringId);
         }
 
