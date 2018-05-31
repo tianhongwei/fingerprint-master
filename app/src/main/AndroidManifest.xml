@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.thw.fingerprint">
+
+    <!--指纹权限-->
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 手势密码的出现界面 -->
+        <activity
+            android:name="com.thw.fingerprint.FingureAriseActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <!--注册判断指纹密码开启的服务-->
+        <service
+            android:name="com.thw.fingerprint.services.JudgeFingureService"
+            android:enabled="true">
+            <intent-filter >
+                <action android:name="com.thw.fingerprint.services.JudgeFingureService"/>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
